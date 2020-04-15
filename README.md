@@ -14,10 +14,10 @@ Understanding the social mental status helps us react faster and in a proper way
 - Business Owners: Keeping a watchful eye on trending topics and people’s emotion change can help business owners run marketing campaign appropriately and find out potential business opportunities, such as new services that needed by people. 
 
 ## The dataset can be used for 
-- the study of people's interactions on Twitter during COVID-19 period
-- the study of public media's behavior during COVID-19 period
-- the study of people's emotion change during COVID-19 period
-- more NLP data mining with plenty tweets during such specific period
+- The study of people's interactions on Twitter during COVID-19 period
+- The study of public media's behavior during COVID-19 period
+- The study of people's emotion change during COVID-19 period
+- More NLP data mining with plenty tweets during such specific period
 
 ## Our data source including:
 
@@ -34,7 +34,7 @@ News:
 1. #COVID-19 news scraped from [Fox News](https://www.foxnews.com/) (daily data from 01/20 to 04/08)
 2. #COVID-19 news scraped from [CNN](https://www.cnn.com/) (daily data from 01/20 to 04/08)
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/data_description.JPG)
-The datasets can be found in folders. 
+The datasets can be found in folders. **P.S.** Due to the file size limitation set by Github, we did not upload the combined dataset. 
 
 
 ## The Visualizations
