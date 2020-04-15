@@ -14,10 +14,10 @@ Understanding the social mental status helps us react faster and in a proper way
 - Business Owners: Keeping a watchful eye on trending topics and people’s emotion change can help business owners run marketing campaign appropriately and find out potential business opportunities, such as new services that needed by people. 
 
 ## The dataset can be used for 
-- the study of people's interactions on Twitter during COVID-19 period
-- the study of public media's behavior during COVID-19 period
-- the study of people's emotion change during COVID-19 period
-- more NLP data mining with plenty tweets during such specific period
+- The study of people's interactions on Twitter during COVID-19 period
+- The study of public media's behavior during COVID-19 period
+- The study of people's emotion change during COVID-19 period
+- More NLP data mining with plenty tweets during such specific period
 
 ## Our data source including:
 
@@ -26,7 +26,7 @@ Confirmed Cases:
 
 Twitter:
 1. Tweets on Twitter retrieved with [TwitterScraper API ](https://github.com/taspinar/twitterscraper) (daily data from 01/20 to 04/08)\
-  **warning**: the daily data is a sample from each day's tweets, not the population. We sampled out abough 1.3K tweets for each day.
+  **warning**: the daily data is a sample from each day's tweets, not the population. We sampled out abough 13K tweets for each day, 1.1M in total.
 2. Twitter trending topics retrieved by scraping [Trendogate.com](https://trendogate.com) (daily data from 01/20 to 04/11)
 3. Number of tweets with #COVID-19 shared by [Tweet Binder](https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/) 
 
@@ -34,7 +34,17 @@ News:
 1. #COVID-19 news scraped from [Fox News](https://www.foxnews.com/) (daily data from 01/20 to 04/08)
 2. #COVID-19 news scraped from [CNN](https://www.cnn.com/) (daily data from 01/20 to 04/08)
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/data_description.JPG)
-The datasets can be found in folders. 
+The datasets can be found in folders. **P.S.** Due to the file size limitation set by Github, we did not upload the combined dataset. To combined the datasets in folders, please try:
+```python
+# Read raw datas from the raw data file
+path = r'------path-------------'
+files = os.listdir(path)
+covid_twitter_data = pd.DataFrame()
+# Concat the Twitters data into one-table
+for file in files:
+    data = pd.read_csv(str(path) + file)
+    covid_twitter_data = covid_twitter_data.append(data, ignore_index=True)
+```
 
 
 ## The Visualizations
