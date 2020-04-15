@@ -3,6 +3,8 @@
 ### Team LightYellowDress&amp;FluffyHair 
 This repository contains all code files and data we used in the University of California, Davis, MSBA program COVID-19 Challenge Competition. In this project, we utlized web scraping techniques to collect data from multi-platforms, leveraged NLP techniques to process the text data, analyzed the data by sentiment analysis and topic modeling, and created Tableau dashboard to present the results. 
 
+The PPT is in here https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Public%20Sentiments%20under%20Covid-19.pptx
+
 ## Motivation
 Understanding the social mental status helps us react faster and in a proper way during the COVID-19 period.
 
