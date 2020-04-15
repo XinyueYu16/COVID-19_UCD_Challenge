@@ -34,7 +34,17 @@ News:
 1. #COVID-19 news scraped from [Fox News](https://www.foxnews.com/) (daily data from 01/20 to 04/08)
 2. #COVID-19 news scraped from [CNN](https://www.cnn.com/) (daily data from 01/20 to 04/08)
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/data_description.JPG)
-The datasets can be found in folders. **P.S.** Due to the file size limitation set by Github, we did not upload the combined dataset. 
+The datasets can be found in folders. **P.S.** Due to the file size limitation set by Github, we did not upload the combined dataset. To combined the datasets in folders, please try:
+```python
+# Read raw datas from the raw data file
+path = r'------path-------------'
+files = os.listdir(path)
+covid_twitter_data = pd.DataFrame()
+# Concat the Twitters data into one-table
+for file in files:
+    data = pd.read_csv(str(path) + file)
+    covid_twitter_data = covid_twitter_data.append(data, ignore_index=True)
+```
 
 
 ## The Visualizations
