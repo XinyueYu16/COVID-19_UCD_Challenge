@@ -33,13 +33,15 @@ Twitter:
 News:
 1. #COVID-19 news scraped from [Fox News](https://www.foxnews.com/) (daily data from 01/20 to 04/08)
 2. #COVID-19 news scraped from [CNN](https://www.cnn.com/) (daily data from 01/20 to 04/08)
-
+![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/data_description.JPG)
+The datasets can be found in folders. 
 
 
 ## The Visualizations
 1. [Twitter Trending Topics & Emotions](https://public.tableau.com/profile/jessica4482#!/vizhome/Book1_15869470914670/TwitterTrendsSenti)
 2. [Twitter Sentiment Analysis & News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes)
 
+## Analysis Framework
 The framework of the data collection and analysis is shown below: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/framework.JPG)
