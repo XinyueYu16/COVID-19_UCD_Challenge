@@ -16,6 +16,10 @@ News:
 1. [Fox News](https://www.foxnews.com/)
 2. [CNN](https://www.cnn.com/)
 
+## The Visualizations
+1. https://public.tableau.com/profile/jessica4482#!/vizhome/Book1_15869470914670/TwitterTrendsSenti
+2. https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes
+
 The framework of the data collection and analysis is shown below: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/framework.JPG)
