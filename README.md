@@ -1,6 +1,6 @@
 ![alt text](https://harfordcountyhealth.com/wp-content/uploads/2020/01/home-banner.jpg "COVID-19 Banner")
 # COVID-19_UCD_Challenge
-### Team LightYellowDress&amp;FluffyHair (Aijie Li, Nora Luo, Willa Yu, Xingxuan Zhang) 
+### Team LightYellowDress&amp;FluffyHair 
 This repository contains all code files and data we used in the University of California, Davis, MSBA program COVID-19 Challenge Competition. 
 ## Our data source including:
 
@@ -15,6 +15,10 @@ Twitter:
 News:
 1. [Fox News](https://www.foxnews.com/)
 2. [CNN](https://www.cnn.com/)
+
+## The Visualizations
+1. https://public.tableau.com/profile/jessica4482#!/vizhome/Book1_15869470914670/TwitterTrendsSenti
+2. https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes
 
 The framework of the data collection and analysis is shown below: 
 
