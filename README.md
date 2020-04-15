@@ -26,7 +26,7 @@ Confirmed Cases:
 
 Twitter:
 1. Tweets on Twitter retrieved with [TwitterScraper API ](https://github.com/taspinar/twitterscraper) (daily data from 01/20 to 04/08)\
-  **warning**: the daily data is a sample from each day's tweets, not the population. We sampled out abough 1.3K tweets for each day.
+  **warning**: the daily data is a sample from each day's tweets, not the population. We sampled out abough 13K tweets for each day, 1.1M in total.
 2. Twitter trending topics retrieved by scraping [Trendogate.com](https://trendogate.com) (daily data from 01/20 to 04/11)
 3. Number of tweets with #COVID-19 shared by [Tweet Binder](https://www.tweetbinder.com/blog/covid-19-coronavirus-twitter/) 
 
