@@ -48,12 +48,24 @@ for file in files:
     covid_twitter_data = covid_twitter_data.append(data, ignore_index=True)
 ```
 
-
-## The Visualizations
-1. [Twitter Trending Topics & Emotions](https://public.tableau.com/profile/jessica4482#!/vizhome/Book1_15869470914670/TwitterTrendsSenti)
-2. [Twitter Sentiment Analysis & News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes)
-
 ## Analysis Framework
 The framework of the data collection and analysis is shown below: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/framework.JPG)
+**IBM Watson Tone Analyzer**: We choose to use IBM's Tone Analyzer (a cloud service) to do the sentiment anlysis because it can provide 5 different tones of the text data which is more than positive-negative sentiment analysis. Through this way, we can study the tweets' emotion more specifically. The limitation of this service is that, for each account, we can only analyze 2,500 tweets/email for free, so this method cannot directly be deployed on the whole dataset we have. 
+
+**Google BERT**: To overcome the limitation of IBM Tone Analyzer, we firstly registered multiple emails accounts and utlized the Tone Analyzer to  labeled a sample of data that we sampling randomly from the whole dataset. With adjustment and also combined with our manually labeled data, we used these data as trainning set for the Google BERT model, a state-of-art machine learning technique for classification. Compared to other alternatives, BERT requires much less time and less data to train, and yields better accuracy. It is a good fit for our case where we have limited training data.
+
+**LDA Topic Modeling**: We leverage LDA topic modeling technique to summarise the news articles we scraped. We clustered news articles in to [9 topics](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Topic_Modeling/LDA_fox_cnn_colab_topics.xlsx), including economical impact and political actions. Through this way, we can better understand how news articles responsed to COVID-19. 
+
+**Limitation**: Besides the IBM's service limitation above, since evaluating a text tone is not a objective thing, the sentiment analysis we conducted is impacted by our subjectivity and the accuracy of IBM Tone Analyzer.
+
+## The Visualizations
+1. [Twitter Trending Topics & Emotions](https://public.tableau.com/profile/jessica4482#!/vizhome/Book1_15869470914670/TwitterTrendsSenti) In this dashboard, people can explore each day's Twitter Trendings and see how emotion of the tweets related to COVID-19 changed by clicking the the confirmed cases histogram or the number of tweets line. 
+![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_1.png)
+2. [Twitter Sentiment Analysis & News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes) In this dashboard, people can see the Twitter sentiment trends and the news related to COVID-19 at the same day by clicking the tweets' sentiment line. 
+![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_2.png)
+
+
+
+
