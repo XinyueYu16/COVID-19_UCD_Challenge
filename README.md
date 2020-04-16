@@ -65,6 +65,8 @@ The framework of the data collection and analysis is shown below:
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_1.png)
 2. [Twitter Sentiment Analysis & News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes) In this dashboard, people can see the Twitter sentiment trends and the news related to COVID-19 at the same day by clicking the tweets' sentiment line. 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_2.png)
+3. Word Cloud of Five Emotions in Tweets
+![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/FiveEmotionsWordCloud.JPG)
 
 
 
