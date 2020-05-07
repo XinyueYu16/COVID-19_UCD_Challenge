@@ -53,6 +53,7 @@ for file in files:
 The framework of the data collection and analysis is shown below: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/framework.JPG)
+
 **IBM Watson Tone Analyzer**: We choose to use IBM's Tone Analyzer (a cloud service) to do the sentiment anlysis because it can provide 5 different tones of the text data which is more than positive-negative sentiment analysis. Through this way, we can study the tweets' emotion more specifically. The limitation of this service is that, for each account, we can only analyze 2,500 tweets/email for free, so this method cannot directly be deployed on the whole dataset we have. 
 
 **Google BERT**: To overcome the limitation of IBM Tone Analyzer, we firstly registered multiple emails accounts and utlized the Tone Analyzer to  labeled a sample of data that we sampling randomly from the whole dataset. With adjustment and also combined with our manually labeled data, we used these data as trainning set for the Google BERT model, a state-of-art machine learning technique for classification. Compared to other alternatives, BERT requires much less time and less data to train, and yields better accuracy. It is a good fit for our case where we have limited training data.
@@ -74,13 +75,15 @@ From the chart, we can tell that people reacted to some #COVID-19 tweets hotly o
 
 **2. Sentiment Analysis of #COVID-19 Tweets**
 [Polarity & Subjectivity of COVID-19 related Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard7) 
-Twitter is not only a place for people to respond to others’ tweets but also a platform to post your tweets and share your feelings. Thus, besides likes/replies/retweets, we also mined the content of COVID-19 related tweets to see how people’s feelings and expressions changed over time. With the help of TextBlob, a sentiment analysis library in Python, we extracted how subjective/objective (subjectivity) the content is and whether the content is positive or negative (polarity) for each tweet. 
+Twitter is not only a place for people to respond to others’ tweets but also a platform to post your tweets and share your feelings. Thus, besides likes/replies/retweets, we also mined the content of COVID-19 related tweets to see how people’s feelings and expressions changed over time. With the help of TextBlob, a sentiment analysis library in Python, we extracted how subjective/objective (subjectivity) the content is and whether the content is positive or negative (polarity) for each tweet.
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_2.png)
 
 According to the chart above, with the development of COVID-19, the related tweets’ expression became more subjective (from about 0.33 to about 0.35) on average, and people’s feelings became more positive (from about 0.04 to about 0.06) on average. Why did this happen? Why with more and more people being infected with Coronavirus, the sentiment of related tweets went positive? With such questions, we went deep into what actual emotions the tweets reflected and what kinds of topics people talked about when mentioning this disease. 
 
 [Five Emotions of COVID-19 related Tweets](https://public.tableau.com/profile/nanluo#!/vizhome/Book2_v2_15887433980520/SentimentLevel) 
 We conducted further analysis by utilizing the BERT model. BERT is Google’s pre-trained model that can be fine-tuned for a wide range of NLP tasks (learn more). Here in our case, it was used in combination with IBM’s Watson Tone Analyzer (learn more) to label the tweets with 5 emotions. The five emotion are: 
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/FiveTweetEmotions.JPG)
 
 After putting our model results back to the timeline under the pandemic context (we used the growth rate of the accumulated number of confirmed cases to reflect the spread of the disease), we summarized some interesting findings.
@@ -94,6 +97,7 @@ In late February, different sentiments tended to diverge, “Assertive” increa
 
 [Emotions Density](https://public.tableau.com/profile/nanluo#!/vizhome/Book2_v2_15887433980520/SentimentDensity)
 Since one tweet can possess more than one sentiment, we also computed the Sentiment Density to show that on average how many different sentiments a tweet had on a single day. This figure will give us a direct impression of how much the tweets were “packed with” different emotions on a day. We then computed the day-on-day change of these metrics and formed the delta metrics.
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_4.JPG)
 
 Through the general trend of Sentiment Density in the above dashboard, we can infer that from late February till mid-March, people were undergoing the densest sentiments, especially in terms of the negative feelings, followed by the period of late January to mid-February. 
@@ -101,9 +105,11 @@ In April, the Sentiment Density decreased and stayed in a lower position, but it
 
 
 **3. Analysis on Topics** 
+
 After studying the general trend of sentiments during the researched period, we wanted to add another layer of information to dissect the overall trend. We intended to extract some hot topics that people discussed when talking about COVID-19 and how the polarity (positive/negative) changed under each topic, so we firstly extracted several topics from the COVID-19 related news and then leveraged the keywords in those topics to classify tweets.
 
 [Topic Modeling on News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes) We utilized Mallet, a natural language processing toolkit, to perform Latent Dirichlet Allocation (LDA) topical modeling, and summarized 8 topics. We named these topics by summarizing the topic keywords returned by the model, and they are as follows (following the descending sequence of frequency): Life during COVID-19, Covid-19 in China, Lockdown Order, Medical Tests & Analysis, Government Actions, Game Season, Economy Impact, Medical Supply. Equipping with the TextBlob’s sentiment analysis, the trendings of these topics over time are as follows:
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_5.JPG)
 
 Different topics cover different time periods, and most resonate with the fact. For example, before March, only a few topics like COVID-19 in China appeared in coronavirus-related news. After March, owing to the widespread of COVID-19, the number of related news began surging, especially for topics like Medical Tests. One interesting finding is that, with the execution of lockdown order since mid-March, the news about Life during COVID-19 peaked as the majority of news with the highest average polarity score.
@@ -112,11 +118,13 @@ For the sentiment of these topics in news, the topic Life during COVID-19 is und
 
 [Topics Trend of Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard8)
 With the topics summarized by the news topic modeling, we used corresponding keywords to classify tweets. After filtering tweets by keywords (described in the chart), suggested by the 8 topics, and the topic trends are shown below: 
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_6.png)
 
 The same trend of news topics applies here as the trend of tweets mentioning COVID-19 in China peaked before March and began decreasing since the first case in the US. As shown in the graph, the public paid more and more attention to government actions over time. Medical-related, economic impact, and life during COVID topics increased slowly. As for the game season, mask, and stay at home topics did not show an obvious upward trend over time.  
 
 [Topics Sentiment Analysis on Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard3)
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_7.png)
 
 When analyzing the sentiments, we can see an increasing positivity in most topics. 
