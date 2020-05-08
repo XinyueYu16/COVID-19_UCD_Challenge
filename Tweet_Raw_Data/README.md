@@ -1,7 +1,7 @@
 # Twitter Raw Date
 The data was retrieved by [TwitterScraper API ](https://github.com/taspinar/twitterscraper). We retrieved about 13,000 tweets each day from Jan. 20th to April 8th (80 days), using search query "#COVID2019 OR #COVID19 OR coronavirus". The total tweets we obtained is 1,100,069 tweets. The raw dataset can be found in the "Raw Data" folder.
 
-Due to the file size limitation of Github, the combined dataset need to be found in [Google Drive]( https://drive.google.com/open?id=1oZtMRYP6FM955_m3HABULdLcUX0XkW8D-).
+Due to the file size limitation of Github, the combined dataset need to be found in [Google Drive](https://drive.google.com/file/d/1K6PsLctv9bALkfbGmBGNw1s6sLF9cKB9/view?usp=sharing).
 
 Or, combine the raw datasets in local system using
 ```python
