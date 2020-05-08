@@ -153,7 +153,7 @@ When analyzing the sentiments, we can see an increasing positivity in most topic
 The topic that has the highest positivity is still about Life during COVID-19. And one trend that has the fastest positivity growth rate is the sentiment about stay at home, which echoes the point brought above that people are getting less sensitive during the quarantine. 
 For the debating topic about the facial mask and the stay at home, we can see the polarity went down first at the beginning of the COVID-19 outbreak but went up later during March. The tweets talking about government-related issues tended to have a very fluctuant sentiment trend line, and the polarity went down on the whole. Recently, more and more tweets talking about economic impacts, such as layoffs and unemployment, but the overall sentiment trend towards positive. For the game season, many games were canceled due to the coronavirus so the sentiment of those tweets was not very positive. Lastly, the tweets mentioning ‘China’ became more negative over time. 
 
-## Conclutions
+## Conclusions
 
 Our analysis has shown some relationships between confirmed cases growth and the trends of sentiments. With more granular data such as geographic data, demographic information and so on, further insights can be generated, such as public sentiment monitoring the hardest-hit areas. With a more specific target, the analysis would be more valuable for institutions or governments to take action.
 
