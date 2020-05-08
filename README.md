@@ -6,7 +6,7 @@ This repository contains all code files and data we used in the University of Ca
 
 
 ## Motivation
-Understanding the social mental status helps us react faster and in a proper way during the COVID-19 period.
+The Corona Virus endangers our physical health indeed, but alongside, social distancing also poses a threat to our emotional stability. Thus, it is crucial to understand public sentiments under COVID-19.
 
 ## Who will benefit by the analysis
 - Twitter: As a social media, Twitter takes the responsibility to control negative rumors spreading during this period for the social good. Twitter can monitor the sentiment trends and study the abnormal emotion peaks like what we did. 
@@ -65,8 +65,11 @@ The framework of the data collection and analysis is shown below:
 **Limitation**: Besides the IBM's service limitation above, since evaluating a text tone is not a objective thing, the sentiment analysis we conducted is impacted by our subjectivity and the accuracy of IBM Tone Analyzer.
 
 ## Analysis
+
 **1. Overview of #COVID-19 Tweets**
+
 [Likes/Replies/Retweets of COVID-19 related Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard6) 
+
 Since the first confirmed case was reported in January 2020, #COVID-19 and other similar tags have been trending on Twitter. With 1.3M+ COVID-19 related tweets (about 10,000+ per day) collected, we wondered how people on Twitter reacted to such tweets over time. Firstly, we explored some engagement metrics of tweets, such as the number of likes. The dashboard shows the average likes/replies/retweets per tweet on each day. 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_1.png)
@@ -74,19 +77,23 @@ Since the first confirmed case was reported in January 2020, #COVID-19 and other
 From the chart, we can tell that people reacted to some #COVID-19 tweets hotly on several days from January to March (e.g. Jan. 29, Feb. 26, and Mar. 9). The content of the tweets which received the most likes/replies/retweets changed from corona beer and COVID-19 in China to COVID-19 in the US and government’s actions. During late March and April, the average likes/replies/retweets per tweet tended to flatten, which indicates people on Twitter reacted or engaged in COVID-19 tweets less than they did previously. 
 
 **2. Sentiment Analysis of #COVID-19 Tweets**
+
 [Polarity & Subjectivity of COVID-19 related Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard7) 
+
 Twitter is not only a place for people to respond to others’ tweets but also a platform to post your tweets and share your feelings. Thus, besides likes/replies/retweets, we also mined the content of COVID-19 related tweets to see how people’s feelings and expressions changed over time. With the help of TextBlob, a sentiment analysis library in Python, we extracted how subjective/objective (subjectivity) the content is and whether the content is positive or negative (polarity) for each tweet.
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_2.png)
 
 According to the chart above, with the development of COVID-19, the related tweets’ expression became more subjective (from about 0.33 to about 0.35) on average, and people’s feelings became more positive (from about 0.04 to about 0.06) on average. Why did this happen? Why with more and more people being infected with Coronavirus, the sentiment of related tweets went positive? With such questions, we went deep into what actual emotions the tweets reflected and what kinds of topics people talked about when mentioning this disease. 
 
-[Five Emotions of COVID-19 related Tweets](https://public.tableau.com/profile/nanluo#!/vizhome/Book2_v2_15887433980520/SentimentLevel) 
+[Five Emotions of COVID-19 related Tweets](https://public.tableau.com/profile/nanluo#!/vizhome/Book2_v2_15887433980520/SentimentLevel)
+
 We conducted further analysis by utilizing the BERT model. BERT is Google’s pre-trained model that can be fine-tuned for a wide range of NLP tasks (learn more). Here in our case, it was used in combination with IBM’s Watson Tone Analyzer (learn more) to label the tweets with 5 emotions. The five emotion are: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/FiveTweetEmotions.JPG)
 
 After putting our model results back to the timeline under the pandemic context (we used the growth rate of the accumulated number of confirmed cases to reflect the spread of the disease), we summarized some interesting findings.
+
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_3.JPG)
 
 Before the first confirmed case in the U.S. was reported (Jan 21th), sentiment “Analytical” was detected most in tweets, other Sentiment Levels remained low.
@@ -96,6 +103,7 @@ In late February, different sentiments tended to diverge, “Assertive” increa
 
 
 [Emotions Density](https://public.tableau.com/profile/nanluo#!/vizhome/Book2_v2_15887433980520/SentimentDensity)
+
 Since one tweet can possess more than one sentiment, we also computed the Sentiment Density to show that on average how many different sentiments a tweet had on a single day. This figure will give us a direct impression of how much the tweets were “packed with” different emotions on a day. We then computed the day-on-day change of these metrics and formed the delta metrics.
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_4.JPG)
@@ -108,7 +116,9 @@ In April, the Sentiment Density decreased and stayed in a lower position, but it
 
 After studying the general trend of sentiments during the researched period, we wanted to add another layer of information to dissect the overall trend. We intended to extract some hot topics that people discussed when talking about COVID-19 and how the polarity (positive/negative) changed under each topic, so we firstly extracted several topics from the COVID-19 related news and then leveraged the keywords in those topics to classify tweets.
 
-[Topic Modeling on News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes) We utilized Mallet, a natural language processing toolkit, to perform Latent Dirichlet Allocation (LDA) topical modeling, and summarized 8 topics. We named these topics by summarizing the topic keywords returned by the model, and they are as follows (following the descending sequence of frequency): Life during COVID-19, Covid-19 in China, Lockdown Order, Medical Tests & Analysis, Government Actions, Game Season, Economy Impact, Medical Supply. Equipping with the TextBlob’s sentiment analysis, the trendings of these topics over time are as follows:
+[Topic Modeling on News](https://public.tableau.com/profile/willa.yu#!/vizhome/SentimentDashboardwithNewsTopics/Dashboard1?publish=yes)
+
+We utilized Mallet, a natural language processing toolkit, to perform Latent Dirichlet Allocation (LDA) topical modeling, and summarized 8 topics. We named these topics by summarizing the topic keywords returned by the model, and they are as follows (following the descending sequence of frequency): Life during COVID-19, Covid-19 in China, Lockdown Order, Medical Tests & Analysis, Government Actions, Game Season, Economy Impact, Medical Supply. Equipping with the TextBlob’s sentiment analysis, the trendings of these topics over time are as follows:
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_5.JPG)
 
@@ -117,6 +127,7 @@ Different topics cover different time periods, and most resonate with the fact. 
 For the sentiment of these topics in news, the topic Life during COVID-19 is undoubtedly the most positive as well as the most objective topic among all the topics, followed by the band containing Game Season, Medical Supply and Medical Tests and Analysis. However, the topic COVID-19 in China, on the other hand, got the most negative and subjective wordings.
 
 [Topics Trend of Tweets](https://public.tableau.com/profile/jessica4482#!/vizhome/Book2_15884623747430/Dashboard8)
+
 With the topics summarized by the news topic modeling, we used corresponding keywords to classify tweets. After filtering tweets by keywords (described in the chart), suggested by the 8 topics, and the topic trends are shown below: 
 
 ![alt text](https://github.com/xxz-jessica/COVID-19_UCD_Challenge/blob/master/Dashboard_pict_6.png)
