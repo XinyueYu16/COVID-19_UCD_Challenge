@@ -1,5 +1,7 @@
 ![alt text](https://harfordcountyhealth.com/wp-content/uploads/2020/01/home-banner.jpg "COVID-19 Banner")
-# COVID-19_UCD_Challenge
+# Twitter Sentiment Analysis Based on News Topics during COVID-19
+## -- How the online public respond to the pandemic
+
 ### Team LightYellowDress&amp;FluffyHair 
 This repository contains all code files and data we used in the University of California, Davis, MSBA program COVID-19 Challenge Competition. In this project, we utlized web scraping techniques to collect data from multi-platforms, leveraged NLP techniques to process the text data, analyzed the data by sentiment analysis and topic modeling, and created Tableau dashboard to present the results. 
 
